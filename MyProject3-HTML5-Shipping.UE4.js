@@ -1158,10 +1158,10 @@ $(document).ready(function() {
 		var utilityJsDownload = fetchOrDownloadAndStore(db, Module.locateFile('https://rawcdn.githack.com/almazufa/testue4/af62efd40c35420ed6b1e4d7db590bb7dd017e67/Utility.js')).then(addScriptToDom);
 		var dataDownload =
 /* // The following code would download and store the .data file as a Blob, which should be more efficient than loading an ArrayBuffer. However that seems to be buggy, so avoid it for now.
-			fetchOrDownloadAndStore(db, Module.locateFile('MyProject3-HTML5-Shipping.data')).then(function(dataBlob) {
+			fetchOrDownloadAndStore(db, Module.locateFile('https://rawcdn.githack.com/almazufa/testue4/6c50501ceca731ede8c5d443952cc38125cfc0ab/MyProject3-HTML5-Shipping.data.js')).then(function(dataBlob) {
 				return readBlobToArrayBuffer(dataBlob).then(function(dataArrayBuffer) {
 					Module['preloadedPackages'] = {};
-					Module['preloadedPackages'][Module.locateFile('MyProject3-HTML5-Shipping.data')] = dataArrayBuffer;
+					Module['preloadedPackages'][Module.locateFile('https://rawcdn.githack.com/almazufa/testue4/6c50501ceca731ede8c5d443952cc38125cfc0ab/MyProject3-HTML5-Shipping.data.js')] = dataArrayBuffer;
 					return dataJsDownload.then(addScriptToDom);
 				})
 			});
